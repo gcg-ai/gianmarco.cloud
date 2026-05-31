@@ -6,7 +6,7 @@
 <meta name="referrer" content="strict-origin-when-cross-origin">
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Page Not Found</title>
+<title>404 — Page Not Found</title>
 <link rel="stylesheet" href="fonts.css">
 <style>
   :root{
@@ -18,6 +18,7 @@
     --border:#E4E4E4;
     --serif:'Cormorant Garamond',Georgia,serif;
     --sans:'Outfit',-apple-system,sans-serif;
+    --mono:'Fira Code',monospace;
   }
   @media(prefers-color-scheme:dark){
     :root{
@@ -44,7 +45,7 @@
   }
   .container{
     text-align:center;
-    max-width:440px;
+    max-width:520px;
   }
   .code{
     font-family:var(--serif);
@@ -60,14 +61,51 @@
     background:var(--accent);
     margin:28px auto 24px;
   }
-  .message{
+  .caption{
+    font-family:var(--sans);
+    font-size:.65rem;
+    font-weight:400;
+    letter-spacing:.25em;
+    text-transform:uppercase;
+    color:var(--faint);
+    margin-bottom:24px;
+  }
+  .opinion{
     font-family:var(--serif);
-    font-size:clamp(1.1rem,2.5vw,1.35rem);
+    font-size:clamp(1rem,2.2vw,1.2rem);
     font-weight:400;
     font-style:italic;
-    line-height:1.5;
+    line-height:1.65;
     color:var(--muted);
+    margin-bottom:12px;
+    text-align:left;
+  }
+  .opinion em{
+    font-style:normal;
+    font-weight:600;
+    color:var(--text);
+  }
+  .held{
+    font-family:var(--serif);
+    font-size:clamp(.95rem,2vw,1.1rem);
+    font-weight:400;
+    line-height:1.6;
+    color:var(--muted);
+    text-align:left;
+    margin-bottom:32px;
+  }
+  .held strong{
+    font-weight:600;
+    color:var(--text);
+    letter-spacing:.04em;
+  }
+  .cite{
+    font-family:var(--mono);
+    font-size:.7rem;
+    color:var(--faint);
+    letter-spacing:.02em;
     margin-bottom:36px;
+    text-align:left;
   }
   .back{
     display:inline-block;
@@ -93,8 +131,11 @@
   <div class="container">
     <p class="code">404</p>
     <div class="rule"></div>
-    <p class="message">This page could not be found.</p>
-    <a class="back" href="/">Return home</a>
+    <p class="caption">Opinion of the Court</p>
+    <p class="opinion">The page sought by the petitioner does not exist within this domain, has been relocated, or was never duly published.</p>
+    <p class="held">This Court lacks jurisdiction over the requested URL. The petition is hereby <strong>DISMISSED</strong>.</p>
+    <p class="cite">Per curiam.</p>
+    <a class="back" href="/">Return to chambers</a>
   </div>
 </body>
 </html>
