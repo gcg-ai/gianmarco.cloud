@@ -6,7 +6,7 @@
 <meta name="referrer" content="strict-origin-when-cross-origin">
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>404 — Page Not Found</title>
+<title>Page Not Found</title>
 <link rel="stylesheet" href="fonts.css">
 <style>
   :root{
@@ -18,7 +18,6 @@
     --border:#E4E4E4;
     --serif:'Cormorant Garamond',Georgia,serif;
     --sans:'Outfit',-apple-system,sans-serif;
-    --mono:'Fira Code',monospace;
   }
   @media(prefers-color-scheme:dark){
     :root{
@@ -45,7 +44,7 @@
   }
   .container{
     text-align:center;
-    max-width:520px;
+    max-width:440px;
   }
   .code{
     font-family:var(--serif);
@@ -61,51 +60,26 @@
     background:var(--accent);
     margin:28px auto 24px;
   }
-  .caption{
-    font-family:var(--sans);
-    font-size:.65rem;
-    font-weight:400;
-    letter-spacing:.25em;
-    text-transform:uppercase;
-    color:var(--faint);
-    margin-bottom:24px;
-  }
-  .opinion{
+  .message{
     font-family:var(--serif);
-    font-size:clamp(1rem,2.2vw,1.2rem);
+    font-size:clamp(1.1rem,2.5vw,1.35rem);
     font-weight:400;
     font-style:italic;
-    line-height:1.65;
+    line-height:1.5;
     color:var(--muted);
-    margin-bottom:12px;
-    text-align:left;
-  }
-  .opinion em{
-    font-style:normal;
-    font-weight:600;
-    color:var(--text);
-  }
-  .held{
-    font-family:var(--serif);
-    font-size:clamp(.95rem,2vw,1.1rem);
-    font-weight:400;
-    line-height:1.6;
-    color:var(--muted);
-    text-align:left;
-    margin-bottom:32px;
-  }
-  .held strong{
-    font-weight:600;
-    color:var(--text);
-    letter-spacing:.04em;
-  }
-  .cite{
-    font-family:var(--mono);
-    font-size:.7rem;
-    color:var(--faint);
-    letter-spacing:.02em;
     margin-bottom:36px;
-    text-align:left;
+  }
+  .monogram{
+    width:46px;
+    margin:0 auto 24px;
+  }
+  .monogram img{
+    width:100%;
+    height:auto;
+    display:block;
+  }
+  @media(prefers-color-scheme:dark){
+    .monogram img{filter:invert(1)}
   }
   .back{
     display:inline-block;
@@ -131,11 +105,11 @@
   <div class="container">
     <p class="code">404</p>
     <div class="rule"></div>
-    <p class="caption">Opinion of the Court</p>
-    <p class="opinion">The page sought by the petitioner does not exist within this domain, has been relocated, or was never duly published.</p>
-    <p class="held">This Court lacks jurisdiction over the requested URL. The petition is hereby <strong>DISMISSED</strong>.</p>
-    <p class="cite">Per curiam.</p>
-    <a class="back" href="/">Return to chambers</a>
+    <p class="message">This page could not be found.</p>
+    <a class="back" href="/">
+      <div class="monogram"><img src="data:image/png;base64,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" alt="GCG"></div>
+      Return home
+    </a>
   </div>
 </body>
 </html>
