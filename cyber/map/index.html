@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data:; connect-src https://cdn.jsdelivr.net; base-uri 'self'; form-action 'self';">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cyber Lessons for Mexico — Gianmarco Coronado Graci</title>
+<meta name="description" content="An interactive comparison of national cybersecurity and cybercrime policy frameworks across six jurisdictions, mapped on six dimensions.">
+<link rel="stylesheet" href="/fonts.css">
+<link rel="stylesheet" href="/assets/site.css?v=2">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" href="/favicon.png" sizes="64x64">
+<meta name="robots" content="noindex">
+<style>
+.wrap{max-width:760px;margin:0 auto;padding:128px 28px 90px;position:relative;z-index:3}
+.vk{font:500 12px/1.4 var(--mono);letter-spacing:.06em;color:var(--faint);margin:0 0 10px}
+h1.vh{font-family:var(--serif);font-weight:600;font-size:clamp(2.3rem,5.5vw,3.2rem);line-height:1.04;letter-spacing:-.01em;margin:0 0 16px}
+h2.vs{font-family:var(--serif);font-weight:600;font-size:1.55rem;margin:0 0 6px}
+.lede{font:300 1.15rem/1.6 var(--sans);color:var(--muted);margin:0 0 18px;max-width:60ch}
+.note{font:400 .9rem/1.6 var(--sans);color:var(--faint);margin:0 0 14px;max-width:60ch}
+.pill{font:400 13px var(--sans);padding:7px 12px;border-radius:8px;border:1px solid var(--border);background:transparent;color:var(--muted);cursor:pointer;transition:border-color .25s,color .25s}
+.pill:hover{border-color:var(--faint);color:var(--text)}
+.pill.on{border-color:var(--text);color:var(--text);background:rgba(128,128,128,.06)}
+.card{background:transparent;border:1px solid var(--border);border-radius:12px;padding:1rem 1.25rem}
+.soft{background:rgba(128,128,128,.06);border-radius:10px;padding:12px 14px}
+.dl{font:500 12px var(--sans);color:var(--muted);margin:0 0 3px}
+.dt{font:400 13px/1.6 var(--sans);color:var(--text);margin:0 0 14px}
+.tag{font:500 11px var(--mono);padding:3px 9px;border-radius:6px;background:rgba(128,128,128,.09);color:var(--muted);white-space:nowrap}
+.src a{color:var(--muted);text-decoration:underline;text-decoration-color:var(--border);text-underline-offset:2px}
+.src a:hover{color:var(--text);text-decoration-color:var(--faint)}
+.glabel{font:500 11px var(--sans);paint-order:stroke}
+.gmk{cursor:pointer}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);border:0}
+.sect{border-top:1px solid var(--border);margin-top:34px;padding-top:26px}
+</style>
+<script>(function(){var d=window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches;document.documentElement.dataset.theme=d?'dark':'light';})();</script>
+</head>
+<body>
+<div class="frame"></div>
+
+<header class="page-head">
+  <div class="page-ctrls">
+    <button class="ctl" type="button" onclick="toggleTheme()" aria-label="Toggle theme">
+      <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4.2"/><path d="M12 2v2.5M12 19.5V22M4.22 4.22l1.77 1.77M18.01 18.01l1.77 1.77M2 12h2.5M19.5 12H22M4.22 19.78l1.77-1.77M18.01 5.99l1.77-1.77"/></svg>
+    </button>
+  </div>
+  <a class="page-mark" href="/" aria-label="Gianmarco Coronado Graci — home"><img src="/assets/monogram.png" alt="GCG monogram" width="46" height="41"></a>
+</header>
+
+<main class="wrap">
+  <h2 class="sr-only">An interactive globe comparing how six jurisdictions build cybersecurity and cybercrime capacity — the United States, Germany for the EU, Brazil, Colombia, Singapore and Estonia — with Mexico as a reference point. Drag to rotate; select a country, by marker or by name button, to open its profile across six dimensions.</h2>
+  <p class="vk">Comparative analysis</p>
+  <h1 class="vh">Cyber Lessons for Mexico</h1>
+  <p class="lede">How six jurisdictions build cybersecurity and cybercrime capacity — the United States, the EU (with Germany), Brazil, Colombia, Singapore and Estonia — mapped across six dimensions, with Mexico as a reference point. Drag to spin the globe; click a marker, or a name below it, to open one.</p>
+  <p class="note">Method — functional equivalence (Dolowitz &amp; Marsh, 2000): copying → emulation → hybridization → inspiration.</p>
+
+  <div style="max-width:440px;margin:18px auto 2px">
+    <svg id="globe" viewBox="0 0 460 460" width="100%" role="img" aria-label="Interactive globe; use the name buttons below to select a country."></svg>
+  </div>
+  <p style="text-align:center;font:400 12px var(--sans);color:var(--faint);margin:2px 0 16px">Drag to spin · click a marker to open it</p>
+  <div style="display:flex;gap:16px;flex-wrap:wrap;justify-content:center;font:400 12px var(--sans);color:var(--muted);margin-bottom:18px">
+    <span style="display:flex;align-items:center;gap:6px"><span id="lg1" style="width:9px;height:9px;border-radius:50%"></span>Comparator</span>
+    <span style="display:flex;align-items:center;gap:6px"><span id="lg2" style="width:11px;height:11px;border-radius:50%"></span>Mexico — reference point</span>
+  </div>
+
+  <div id="jurPills" style="display:flex;gap:8px;flex-wrap:wrap;justify-content:center;margin-bottom:18px"></div>
+  <div id="profile"></div>
+
+  <div class="sect">
+    <h2 class="vs">One dimension across the six</h2>
+    <p class="note">Mexico is the reference point, shown on the globe — these six are the mapped comparators.</p>
+    <div id="dimPills" style="display:flex;gap:8px;flex-wrap:wrap;margin:6px 0 18px"></div>
+    <div id="dimCompare"></div>
+  </div>
+
+  <div class="sect">
+    <h2 class="vs">Five recurring patterns</h2>
+    <div id="patterns" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:10px;margin:14px 0 26px"></div>
+    <h2 class="vs">Three key trade-offs</h2>
+    <div id="tradeoffs" style="display:flex;flex-direction:column;gap:10px"></div>
+  </div>
+
+  <div class="sect">
+    <h2 class="vs">Recommendations</h2>
+    <p class="note">Real cybercrime capacity is an inter-branch achievement, not something a prosecutor’s office can self-generate. One actor can begin today. The consequential reforms belong to three others — and one precondition gates them all. Open each to see what it owns.</p>
+    <style>
+      .recmap{display:grid;grid-template-columns:repeat(auto-fit,minmax(248px,1fr));gap:10px;margin:14px 0 0;align-items:start}
+      .ract{border:1px solid var(--border);border-radius:12px;overflow:hidden;transition:border-color .3s}
+      .ract.now{border:1.5px solid var(--text)}
+      .rhead{width:100%;display:flex;align-items:center;gap:11px;padding:13px 15px;background:none;border:0;cursor:pointer;text-align:left;color:var(--text)}
+      .rhead:hover{background:var(--glow)}
+      .rnum{font:500 11px var(--mono);color:var(--faint);flex:none}
+      .rname{flex:1;min-width:0}
+      .rname b{display:block;font:500 14.5px var(--sans)}
+      .rname em{font-style:normal;font:400 12px var(--sans);color:var(--faint)}
+      .rchip{font:500 10px var(--mono);padding:3px 8px;border-radius:6px;white-space:nowrap;border:1px solid var(--border);color:var(--muted)}
+      .ract.now .rchip{border-color:var(--text);color:var(--text)}
+      .rchev{flex:none;color:var(--faint);transition:transform .25s}
+      .ract.open .rchev{transform:rotate(180deg)}
+      .ritems{margin:0;padding:0 15px 13px 40px;list-style:none}
+      .ritems li{font:400 12.5px/1.5 var(--sans);color:var(--muted);padding:6px 0;border-top:1px solid var(--border)}
+    </style>
+    <div id="recMap" class="recmap"></div>
+    <div id="recOversight" style="margin-top:12px"></div>
+  </div>
+
+  <p style="font:400 12px/1.6 var(--sans);color:var(--faint);margin:26px 0 0">From my comparative research on national cybersecurity and cybercrime policy frameworks. Sources are linked within each jurisdiction. &copy; <span id="yr">2026</span> Gianmarco Coronado Graci.</p>
+</main>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.5/d3.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/topojson/3.0.2/topojson.min.js"></script>
+<script>
+function toggleTheme(){var r=document.documentElement;r.dataset.theme=r.dataset.theme==='dark'?'light':'dark';if(window.__rerenderGlobe)window.__rerenderGlobe();}
+(function(){var y=document.getElementById('yr');if(y)y.textContent=new Date().getFullYear();})();
+(function(){
+  var DIMS=[{k:'gov',label:'Institutional governance'},{k:'law',label:'Legal authorities'},{k:'cap',label:'Investigative & technical capacity'},{k:'coop',label:'International cooperation'},{k:'rights',label:'Accountability & rights'},{k:'adapt',label:'Adaptability'}];
+  var J=[
+    {id:'co',name:'Colombia',geo:'Colombia',ll:[-73.1,4.1],arch:'Closest institutional peer',law:'Ley 1273 de 2009 · CONPES 3995',budL:'Party · 2020',
+     why:'An independent, civil-law prosecution service like Mexico’s — constitutional autonomy, accusatory procedure, an organized-crime mandate — that enacted one of Latin America’s earliest comprehensive cybercrime laws.',
+     gov:'One of the region’s most structured frameworks: CONPES 3995 (2020) names MinTIC as policy lead, ColCERT (since 2022 under MinTIC coordination, Decreto 338/2022) handles incident response, the Policía Nacional’s Centro Cibernético Policial investigates, the Fiscalía prosecutes through a specialized cybercrime unit (Resolución 117/2023), and the SIC protects data.',
+     law_:'Ley 1273 de 2009 — one of Latin America’s earliest and most comprehensive cybercrime statutes — created a new protected legal interest in the Penal Code, criminalizing access, interception, damage, malicious software, digital identity theft and computer fraud; Ley 1581 de 2012 governs data protection.',
+     cap:'The Centro Cibernético Policial has meaningful technical capacity — malware analysis, forensics, dark-web and cryptocurrency tracing — supported by Interpol and Europol operations and extensive OAS-CICTE training; sectoral CSIRTs exist for finance.',
+     coop:'A Budapest party (acceded 2020) with 24/7 contact points and a signatory of the 2022 Second Additional Protocol; an OECD member since 2020; extensive cooperation with the United States and OAS/CICTE networks.',
+     rights:'An active Constitutional Court reviews surveillance and data protection (Sentencia C-594/14 on interception); judicial authorization is required for interception; the SIC enforces data protection and the Defensoría del Pueblo provides an ombudsman function. Transparency on surveillance is limited.',
+     adapt:'The CONPES mechanism gives periodic (non-binding) policy updates — 3854 in 2016, 3995 in 2020; Ley 1273’s broad drafting flexes to new crimes; MinTIC issues updatable guidance.',
+     takeaway:'An independent, civil-law prosecution service can build real cybercrime capacity through internal reorganization, without waiting for comprehensive legislation.',
+     src:[{l:'Ley 1273 de 2009',u:'https://www.funcionpublica.gov.co/eva/gestornormativo/norma.php?i=34492'},{l:'Ley 1581 de 2012',u:'https://www.funcionpublica.gov.co/eva/gestornormativo/norma.php?i=49981'},{l:'CONPES 3995',u:'https://normograma.mintic.gov.co/mintic/compilacion/docs/CONPES_DNP_3995_2020.htm'},{l:'Centro Cibernético Policial',u:'https://www.policia.gov.co/directorio/centro-cibernetico-policial'},{l:'Budapest accession',u:'https://www.coe.int/en/web/cybercrime/-/colombia-joined-the-budapest-convention-on-cybercrime'},{l:'Sentencia C-594/14',u:'https://www.corteconstitucional.gov.co/RELATORIA/2014/C-594-14.htm'},{l:'Resolución 117/2023 (Fiscalía cyber unit)',u:'https://jurinfo.jep.gov.co/normograma/compilacion/docs/resolucion_fiscalia_0117_2023.htm'}]},
+    {id:'us',name:'United States',geo:'United States of America',ll:[-98.6,39.8],arch:'Layered & distributed',law:'CFAA · 18 U.S.C. §1030',budL:'Party · 2006',
+     why:'The world’s most-resourced apparatus and Mexico’s primary cross-border partner; it also shows the challenge of coordinating across a federal system.',
+     gov:'The most complex architecture studied — CISA on the civilian side, the FBI Cyber Division and DOJ CCIPS for law enforcement, Cyber Command and the NSA for military and intelligence, with a National Cyber Director coordinating from the White House. Layered by accretion, not design.',
+     law_:'The CFAA (18 U.S.C. §1030) is the core criminal statute; ECPA, the Stored Communications Act and Rule 41 govern digital evidence; the CLOUD Act (2018) compels US-provider data regardless of location; CIRCIA (2022) mandates 72-hour incident and 24-hour ransomware reporting.',
+     cap:'Fifty-six FBI field offices with cyber squads, the IC3, the NCIJTF, the Secret Service for financial cybercrime, NIST standards, and extensive information-sharing under the 2015 Cybersecurity Information Sharing Act.',
+     coop:'A Budapest party since 2006, with bilateral MLATs including Mexico; the first CLOUD Act agreement (UK, 2019); 24/7 contact points and the G7 network.',
+     rights:'Fourth Amendment warrant protection, FISA Court and PCLOB oversight, and company transparency reporting. Critiqued for the breadth of CFAA discretion and the scope of national-security surveillance.',
+     adapt:'Legislative amendment, executive orders and agency rulemaking; the 2023 National Cybersecurity Strategy added implementation milestones — since superseded by a markedly different 2026 strategy. There are no sunset clauses, and updates lag the technology.',
+     takeaway:'A layered, federal system delivers depth but recurring coordination problems — hence the value of a central coordinating role.',
+     src:[{l:'CISA',u:'https://www.cisa.gov/about'},{l:'CFAA (DOJ)',u:'https://www.justice.gov/jm/jm-9-48000-computer-fraud'},{l:'FBI Cyber',u:'https://www.fbi.gov/investigate/cyber'},{l:'CLOUD Act (DOJ)',u:'https://www.justice.gov/criminal/cloud-act-resources'},{l:'CIRCIA',u:'https://www.cisa.gov/topics/cyber-threats-and-advisories/information-sharing/cyber-incident-reporting-critical-infrastructure-act-2022-circia'},{l:'Budapest parties',u:'https://www.coe.int/en/web/conventions/full-list?module=signatures-by-treaty&treatynum=185'}]},
+    {id:'eu',name:'EU · Germany',geo:'Germany',ll:[10.4,51.2],arch:'Multi-level regulatory frontier',law:'NIS2 Directive · IT Security Act 2.0',budL:'Party · 2nd Protocol 2022',
+     why:'The global frontier of cyber regulation; Germany, a civil-law federation, shows how a member state’s BSI models a specialized civilian authority and can exceed EU minimums.',
+     gov:'Policy is set at Union level — ENISA, Europol’s EC3, EU-CyCLONe, the Cyber Diplomacy Toolbox — and implemented by member states. Germany’s BSI is the central federal IT-security authority and the BKA handles cybercrime; German federalism mirrors Mexico’s.',
+     law_:'A dense regulatory stack — NIS2 across 18 sectors, DORA for finance, the Cyber Resilience Act for products, GDPR’s 72-hour breach notice — with substantive crime at member-state level. Germany’s IT Security Act 2.0 (2021) expanded BSI powers.',
+     cap:'EC3 forensic support and Joint Investigation Teams, Eurojust and the European Judicial Network, ENISA’s Cyber Europe exercises, and the BSI’s vulnerability-analysis and incident-response capacity.',
+     coop:'The European Investigation Order for intra-EU evidence, a still-unconcluded EU-US cross-border data agreement, and the Budapest Second Additional Protocol (2022) for direct cooperation with providers.',
+     rights:'EU Charter Articles 7, 8 and 47; independent DPAs with fines up to 4% of global turnover; NIS2 supervisory authorities; the CJEU’s Digital Rights Ireland, Schrems and La Quadrature rulings; and Germany’s right to informational self-determination.',
+     adapt:'Slow primary legislation — NIS2 took about three years — paired with agile ENISA guidance, delegated acts, and built-in review clauses (NIS2 review by October 2027).',
+     takeaway:'Layered regulation plus agile sub-legislative instruments combine binding obligations with the flexibility to adapt.',
+     src:[{l:'NIS2 Directive',u:'https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022L2555'},{l:'GDPR',u:'https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32016R0679'},{l:'ENISA',u:'https://www.enisa.europa.eu/about-enisa/what-we-do'},{l:'BSI',u:'https://www.bsi.bund.de/EN/Das-BSI/Auftrag/auftrag_node.html'},{l:'2nd Additional Protocol',u:'https://www.coe.int/en/web/cybercrime/second-additional-protocol'}]},
+    {id:'sg',name:'Singapore',geo:null,ll:[103.8,1.35],arch:'Most centralized',law:'Cybersecurity Act 2018 · Computer Misuse Act',budL:'Not a Budapest party',
+     why:'A small-state high-performer that isolates the institutional-design variable — success driven by governance architecture, not resources alone.',
+     gov:'The most centralized model — the CSA, under the Prime Minister’s Office, headed by a statutory Commissioner of Cybersecurity who designates critical information infrastructure and directs response, with SingCERT and the Police Cybercrime Command alongside. Concentrated authority enables rapid decisions.',
+     law_:'The Cybersecurity Act 2018 (a CII regime, mandatory incident reporting, provider licensing), the Computer Misuse Act 1993 (last amended 2025), the PDPA (2012, breach notice added in 2020), and the Evidence and Criminal Procedure Codes.',
+     cap:'A small footprint concentrates resources — advanced CSA capacity, SingCERT, the Cybercrime Command, heavy workforce investment (CSAT, SG Cyber Talent), and a Cybersecurity Industry Call for Innovation funding up to S$1,000,000 per project.',
+     coop:'Not a party to the Budapest Convention — one of two non-parties in the study, alongside Mexico; cooperates through ASEAN and Five-Eyes-aligned partners, and hosts the ASEAN-Singapore Centre of Excellence and the Interpol Global Complex.',
+     rights:'Security-first, with comparatively fewer checks — judicial review of the Commissioner is rarely exercised, there is no independent data-protection commission (it sits within the IMDA), and transparency reporting is limited.',
+     adapt:'The Minister makes subsidiary legislation and the Commissioner issues codes of practice; the 2021 strategy update absorbed new threats (supply-chain, IoT) within the existing framework — rapid adaptation from centralized decision-making.',
+     takeaway:'Governance architecture, not resources alone, drives effectiveness — but a centralized commissioner model suits some constitutional systems and not others.',
+     src:[{l:'Cyber Security Agency',u:'https://www.csa.gov.sg/about-csa/who-we-are/'},{l:'Cybersecurity Act 2018',u:'https://sso.agc.gov.sg/Act/CSA2018'},{l:'Computer Misuse Act',u:'https://sso.agc.gov.sg/Act/CMA1993'},{l:'PDPA 2012',u:'https://sso.agc.gov.sg/Act/PDPA2012'},{l:'Budapest parties (Singapore absent)',u:'https://www.coe.int/en/web/conventions/full-list?module=signatures-by-treaty&treatynum=185'}]},
+    {id:'br',name:'Brazil',geo:'Brazil',ll:[-51.9,-10.8],arch:'Fragmented · sequential builder',law:'Marco Civil · LGPD · Lei 14.155/2021',budL:'Acceded · 2023',
+     why:'The most analytically useful Latin American comparator — a large, federal, civil-law jurisdiction with organized-crime challenges and a civilian-led prosecution service.',
+     gov:'Centered on the GSI/Presidency, with CERT.br (under CGI.br) for technical response, the Polícia Federal for investigation and the MPF for prosecution, plus ANATEL and the ANPD. The fragmented architecture is criticized for unclear lines of authority.',
+     law_:'Cybercrime is scattered across statutes — Lei Carolina Dieckmann (12.737/2012, mild penalties), Lei 14.155/2021 (raised penalties), the Marco Civil da Internet (2014) and the LGPD (2018). There is still no comprehensive cybersecurity law; the non-binding E-Ciber strategy (2020) expired in 2023 and was replaced by a National Cybersecurity Policy (Decreto 11.856/2023) and a 2025 E-Ciber (Decreto 12.573/2025).',
+     cap:'A Polícia Federal cybercrime division, recently expanded across all 27 superintendencies though capacity remains uneven; CERT.br is internationally respected through the global FIRST community.',
+     coop:'Acceded to Budapest in 2023, ending years of sovereignty-based resistance; participates in Interpol operations, and CERT.br cooperates technically through FIRST.',
+     rights:'The Marco Civil requires judicial authorization for user data; the ANPD’s independence was strengthened by Lei 14.460/2022, and Constitutional Amendment 115/2022 elevated data protection to a fundamental right; the 1988 Constitution protects privacy (Article 5, X and XII). Transparency reporting is limited.',
+     adapt:'Iterative and reactive — penalties raised after specific incidents; cybersecurity strategy rests on executive decree rather than legislation (E-Ciber 2020 → 2023 policy → 2025 strategy), which keeps it fragile.',
+     takeaway:'A cautionary case: fragmented authority and decree-based, non-binding strategy limit durable capacity.',
+     src:[{l:'Marco Civil da Internet',u:'http://www.planalto.gov.br/ccivil_03/_ato2011-2014/2014/lei/l12965.htm'},{l:'LGPD',u:'http://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709.htm'},{l:'Lei 14.155/2021',u:'http://www.planalto.gov.br/ccivil_03/_ato2019-2022/2021/lei/L14155.htm'},{l:'E-Ciber 2025 (D12573)',u:'https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2025/decreto/D12573.htm'},{l:'CERT.br',u:'https://www.cert.br/about/'},{l:'Budapest parties',u:'https://www.coe.int/en/web/conventions/full-list?module=signatures-by-treaty&treatynum=185'}]},
+    {id:'ee',name:'Estonia',geo:'Estonia',ll:[25.5,58.7],arch:'Small-state, cooperation-driven',law:'Cybersecurity Act 2018 · Penal Code §§206-217',budL:'Party',
+     why:'A small state embedded in the EU and NATO, forged by the 2007 cyberattacks — showing how a cyber crisis accelerates institution-building and how norm entrepreneurship yields outsized influence.',
+     gov:'Shaped by the 2007 cyberattacks. The Information System Authority (RIA) runs CERT-EE and, since 2023, the National Cyber Security Centre; the Ministry of Justice and Digital Affairs leads policy (since 2025); the NATO CCDCOE in Tallinn, which convened the Tallinn Manual, gives outsized influence.',
+     law_:'The Cybersecurity Act (2018) transposes the NIS Directive; the Penal Code (§§206-208, 213, 217) covers Budapest-category offences including illegal access; the e-governance stack (X-Road, digital ID) raises both capability and security requirements.',
+     cap:'CERT-EE for national response and a Police cybercrime bureau (C3), constrained by a small population — offset by international cooperation and the CCDCOE’s research and training.',
+     coop:'A Budapest party within EU frameworks (EIO, Eurojust, Europol); the CCDCOE hosts Locked Shields, the world’s largest live-fire cyber exercise; a leading advocate for applying international law to cyberspace through the Tallinn Manual.',
+     rights:'As an EU member, bound by the Charter and GDPR; an independent Data Protection Inspectorate; small size creates informal accountability but also concentrates capability, raising proportionality concerns.',
+     adapt:'A multi-year strategy cycle — the current 2024-2030 “Cyber-Conscious Estonia” is the fourth since 2008; NIS2 transposition (in force January 2026) drives legislative updates; advanced e-governance enables rapid deployment of technical standards.',
+     takeaway:'A cyber crisis can accelerate institution-building, and a small state can gain outsized influence through norm entrepreneurship.',
+     src:[{l:'Information System Authority (RIA)',u:'https://www.ria.ee/en/authority-news-and-contact/authority-and-management/tasks-and-structure-authority'},{l:'Penal Code',u:'https://www.riigiteataja.ee/en/eli/ee/522012015002/consolide/current'},{l:'Cybersecurity Act',u:'https://www.riigiteataja.ee/en/eli/523052018003/consolide'},{l:'CCDCOE · Locked Shields',u:'https://ccdcoe.org/locked-shields/'},{l:'Data Protection Inspectorate',u:'https://www.aki.ee/en'}]}
+  ];
+  var MX={id:'mx',name:'Mexico',geo:'Mexico',ll:[-102,23.6],budL:'Invited 2018 · not acceded',target:true,
+    p:['Mexico is one of the few G20 members without dedicated cybersecurity legislation. It published a National Cybersecurity Strategy in 2017 (with no statutory force), and proposals for a General Cybersecurity Act have circulated in Congress since 2021.',
+       'Invited to accede to the Budapest Convention in 2018, Mexico had still not done so as of 2026; it also stayed outside the new UN (Hanoi) Convention — leaving it outside both global cybercrime treaty systems.',
+       'Cybercrime work is distributed and procedure-bound: a police-level federal cyber-investigations unit rather than a dedicated cybercrime prosecutor’s office, the Código Nacional de Procedimientos Penales for electronic-evidence powers, and Article 16’s requirement of federal judicial authorization for any interception. Article 6 (data protection) and the Inter-American framework set a demanding rights baseline — underscored by Pegasus spyware deployments documented across three administrations.'],
+    src:[{l:'Budapest parties (Mexico invited, not acceded)',u:'https://www.coe.int/en/web/conventions/full-list?module=signatures-by-treaty&treatynum=185'},{l:'R3D · Mexico & the Budapest Convention',u:'https://www.derechosdigitales.org/wp-content/uploads/minuta_r3d.pdf'}]};
+  var ALL=J.concat([MX]);
+  var PATTERNS=[{t:'Specialization + coordination',d:'Every jurisdiction created a dedicated cyber institution and invested in mechanisms to connect it to law enforcement, intelligence and sectoral regulators.'},{t:'Layered legal architecture',d:'No one relies on a single statute — general cybercrime offences, sector rules, data protection, critical-infrastructure mandates and digital-evidence powers stack together. One general law rarely solves everything.'},{t:'Mandatory incident reporting',d:'High-performing systems require timely incident reporting (CIRCIA, NIS2, Singapore’s Act, DORA), which drives both coordinated response and threat intelligence.'},{t:'Forensics + workforce investment',d:'Specialized forensics infrastructure and certified workforces are universal — Singapore’s CSAT and Colombia’s OAS-supported programs show it works even under constraint.'},{t:'Cooperation infrastructure',d:'Standing mechanisms beat ad hoc ones — the Budapest 24/7 network, the EIO, CLOUD Act agreements. Operationalizing beats merely signing.'}];
+  var TRADE=[{t:'Centralization vs. distributed governance',d:'Singapore concentrates authority for speed; the US distributes it for redundancy at the cost of coordination. Federal systems generally cannot centralize, so the task becomes coordination without consolidation.'},{t:'Effectiveness vs. rights protection',d:'More intrusive powers aid investigations but risk overreach; strong judicial authorization and independent oversight are what hold the balance.'},{t:'Speed of adaptation vs. democratic deliberation',d:'Executive agility (Singapore) versus multi-year legislation (EU). Most settle on layering: primary law sets the frame, secondary instruments move fast.'}];
+  function $(id){return document.getElementById(id);}
+  var selected='mx';
+
+  function srcHtml(arr){if(!arr||!arr.length)return '';return '<div style="margin-top:14px;padding-top:12px;border-top:1px solid var(--border)"><div class="dl">Sources</div><div class="src" style="font:400 12px/1.8 var(--sans);color:var(--muted)">'+arr.map(function(s){return '<a href="'+s.u+'" target="_blank" rel="noopener noreferrer">'+s.l+'</a>';}).join(' &middot; ')+'</div></div>';}
+  function profileHtml(j){
+    if(j.target){return '<div class="card" style="border-width:1.5px;border-color:var(--text)"><div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:10px"><span style="font-family:var(--serif);font-weight:600;font-size:1.3rem">Mexico — the reference point</span><span class="tag">'+j.budL+'</span></div>'+j.p.map(function(t,i){return '<p style="font:400 13px/1.65 var(--sans);color:'+(i<2?'var(--text)':'var(--muted)')+';margin:0 0 10px">'+t+'</p>';}).join('')+srcHtml(j.src)+'</div>';}
+    var dimsHtml=DIMS.map(function(d){var key=d.k==='law'?'law_':d.k;return '<div class="dl">'+d.label+'</div><p class="dt">'+j[key]+'</p>';}).join('');
+    return '<div class="card"><div style="display:flex;justify-content:space-between;align-items:flex-start;gap:12px;flex-wrap:wrap;margin-bottom:10px"><div><div style="font-family:var(--serif);font-weight:600;font-size:1.35rem;line-height:1.1">'+j.name+'</div><div style="font:400 13px var(--sans);color:var(--muted);margin-top:3px">'+j.arch+'</div></div><span class="tag">'+j.budL+'</span></div><div class="soft" style="margin-bottom:16px"><div style="font:500 11px var(--mono);color:var(--muted);margin-bottom:4px">Why selected</div><div style="font:400 13px/1.55 var(--sans);color:var(--text)">'+j.why+'</div></div><div style="font:400 12px var(--mono);color:var(--muted);margin-bottom:16px">'+j.law+'</div>'+dimsHtml+'<div style="margin-top:4px;padding-top:14px;border-top:1px solid var(--border)"><div class="dl">Design takeaway</div><p class="dt" style="margin:0">'+j.takeaway+'</p></div>'+srcHtml(j.src)+'</div>';
+  }
+  function pick(id){selected=id;document.querySelectorAll('[data-j]').forEach(function(x){x.classList.toggle('on',x.getAttribute('data-j')===id);});var j=ALL.filter(function(x){return x.id===id;})[0];$('profile').innerHTML=profileHtml(j);if(window.__focus)window.__focus(j.ll);if(window.__paintSel)window.__paintSel();}
+  $('jurPills').innerHTML=ALL.map(function(j){return '<button class="pill'+(j.id===selected?' on':'')+'" data-j="'+j.id+'">'+j.name+'</button>';}).join('');
+  document.querySelectorAll('[data-j]').forEach(function(b){b.addEventListener('click',function(){if(window.__stop)window.__stop();pick(b.getAttribute('data-j'));});});
+
+  $('dimPills').innerHTML=DIMS.map(function(d,i){return '<button class="pill'+(i===0?' on':'')+'" data-d="'+d.k+'">'+d.label+'</button>';}).join('');
+  function renderCompare(k){var key=k==='law'?'law_':k;$('dimCompare').innerHTML=J.map(function(j){return '<div class="card" style="padding:.85rem 1.1rem;margin-bottom:10px"><div style="display:flex;justify-content:space-between;align-items:center;gap:10px;margin-bottom:6px"><span style="font:500 14px var(--sans)">'+j.name+'</span><span style="font:400 12px var(--sans);color:var(--muted)">'+j.arch+'</span></div><p style="font:400 13px/1.6 var(--sans);margin:0">'+j[key]+'</p></div>';}).join('');}
+  document.querySelectorAll('[data-d]').forEach(function(b){b.addEventListener('click',function(){document.querySelectorAll('[data-d]').forEach(function(x){x.classList.remove('on');});b.classList.add('on');renderCompare(b.getAttribute('data-d'));});});
+
+  $('patterns').innerHTML=PATTERNS.map(function(p){return '<div class="soft"><div style="font:500 13px var(--sans);margin-bottom:5px">'+p.t+'</div><div style="font:400 12px/1.55 var(--sans);color:var(--muted)">'+p.d+'</div></div>';}).join('');
+  $('tradeoffs').innerHTML=TRADE.map(function(t){return '<div class="card" style="padding:.85rem 1.1rem"><div style="font:500 14px var(--sans);margin-bottom:5px">'+t.t+'</div><div style="font:400 13px/1.6 var(--sans);color:var(--muted)">'+t.d+'</div></div>';}).join('');
+
+  var REC=[
+    {id:'fgr',name:'Attorney General (FGR)',cap:'on its own authority',now:true,note:'Within its Article 102-A autonomy — no new law or budget. Modest but meaningful: it prepares the institutional ground, it does not create capacity by itself.',items:['Adopt standardized digital-evidence protocols (chain of custody, ISO/NIST-aligned)','Designate a cybercrime technical coordinator','Report transparently on the cybercrime caseload','Build a prosecutor training curriculum']},
+    {id:'cong',name:'Congress',cap:'law &amp; budget',now:false,note:'The legislative foundation and the money — none of it within the FGR’s reach.',items:['Amend the 1999 Federal Criminal Code to reach cyber-enabled conduct and modern attack vectors','Enact a General Cybersecurity Law defining institutional competencies and reporting duties','Amend the Código Nacional de Procedimientos Penales: digital-evidence standards, expedited preservation orders, admissibility rules','Appropriate a dedicated budget — forensic infrastructure, specialist salaries, continuous training']},
+    {id:'exec',name:'The Executive',cap:'treaties &amp; coordination',now:false,note:'Treaties and coordination — instruments only the President and Senate can deliver.',items:['Decree inter-agency coordination, with a clear line between criminal investigation and intelligence','Accede to the Budapest Convention, positioning for the parallel Hanoi Convention','Sign MOUs between the FGR and the ATDT, CERT-MX and the Centro Nacional de Inteligencia']},
+    {id:'jud',name:'The Judiciary',cap:'able to judge the evidence',now:false,note:'Prosecutorial capacity without judges who can weigh digital evidence yields cases that fail at trial.',items:['Train judges to assess digital evidence under updated admissibility and proportionality standards']}
+  ];
+  var rchev='<svg class="rchev" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>';
+  $('recMap').innerHTML=REC.map(function(r,i){
+    var chip='<span class="rchip">'+(r.now?'Can begin now':'Requires reform')+'</span>';
+    var items=r.items.map(function(x){return '<li>'+x+'</li>';}).join('');
+    return '<div class="ract'+(r.now?' now':'')+(i===0?' open':'')+'" data-ract="'+i+'"><button class="rhead" type="button"><span class="rnum">'+(i+1)+'</span><span class="rname"><b>'+r.name+'</b><em>'+r.cap+'</em></span>'+chip+rchev+'</button><ul class="ritems"'+(i===0?'':' style="display:none"')+'>'+items+'</ul></div>';
+  }).join('');
+  document.querySelectorAll('[data-ract]').forEach(function(card){
+    var btn=card.querySelector('.rhead'),its=card.querySelector('.ritems');
+    btn.addEventListener('click',function(){var open=card.classList.toggle('open');its.style.display=open?'block':'none';});
+  });
+  $('recOversight').innerHTML='<div class="card" style="border-color:var(--text)"><div style="font:500 11px var(--mono);color:var(--muted);margin-bottom:6px">The precondition — under all four</div><p style="font:400 13px/1.65 var(--sans);color:var(--text);margin:0">Pair any expansion of investigative power with independent oversight that has real enforcement power: restore an autonomous data-protection and transparency guarantor to fill the void left by INAI. After Pegasus, capacity should follow oversight, not precede it.</p></div>';
+
+  $('profile').innerHTML=profileHtml(MX);
+  renderCompare('gov');
+
+  var svg=d3.select('#globe'),W=460,R=205,PAL={};
+  function gv(n){return getComputedStyle(document.documentElement).getPropertyValue(n).trim();}
+  function palette(){var dark=document.documentElement.dataset.theme==='dark';return{ocean:dark?'#15171c':'#F4F4F4',land:dark?'#272a30':'#E4E4E4',comp:dark?'#3b3f47':'#CFCFCF',mx:dark?'#666':'#9A9A9A',stroke:gv('--bg'),grat:dark?'rgba(255,255,255,.05)':'rgba(0,0,0,.05)',dot:gv('--muted'),dotMx:gv('--text'),label:gv('--text'),halo:gv('--bg')};}
+  var projection=d3.geoOrthographic().scale(R).translate([W/2,W/2]).rotate([55,-12]).clipAngle(90);
+  var path=d3.geoPath(projection);
+  var gmap={};J.forEach(function(j){if(j.geo)gmap[j.geo]=j;});gmap[MX.geo]=MX;
+  var ocean=svg.append('circle').attr('cx',W/2).attr('cy',W/2).attr('r',R);
+  var gGrat=svg.append('path').datum(d3.geoGraticule10()).attr('fill','none').attr('stroke-width',.5);
+  var gCountries=svg.append('g'),gMarkers=svg.append('g');
+  var timer,stopped=false;
+
+  function fillFor(name){var j=gmap[name];if(!j)return PAL.land;return j.id==='mx'?PAL.mx:PAL.comp;}
+  function render(){
+    ocean.attr('fill',PAL.ocean);gGrat.attr('d',path).attr('stroke',PAL.grat);
+    gCountries.selectAll('path').attr('d',path).attr('fill',function(d){return fillFor(d.properties.name);}).attr('stroke',PAL.stroke);
+    var c=[-projection.rotate()[0],-projection.rotate()[1]];
+    gMarkers.selectAll('g.mkg').each(function(d){var p=projection(d.ll),vis=d3.geoDistance(d.ll,c)<Math.PI/2;d3.select(this).attr('transform','translate('+p[0]+','+p[1]+')').style('opacity',vis?1:0).style('pointer-events',vis?'all':'none');});
+  }
+  function paintSel(){gMarkers.selectAll('g.mkg').select('circle.mk').attr('stroke',function(d){return d.id===selected?PAL.dotMx:PAL.halo;}).attr('stroke-width',function(d){return d.id===selected?2.5:1.5;});gMarkers.selectAll('g.mkg').select('text').style('opacity',function(d){return d.id===selected?1:0;});}
+  window.__paintSel=paintSel;
+  function focusOn(ll){var r0=projection.rotate(),r1=[-ll[0],-ll[1]];d3.transition().duration(750).tween('r',function(){var i=d3.interpolate(r0,r1);return function(t){projection.rotate(i(t));render();};});}
+  window.__focus=focusOn;
+  function stop(){stopped=true;if(timer)timer.stop();}
+  window.__stop=stop;
+
+  function repaint(){PAL=palette();$('lg1').style.background=PAL.dot;$('lg2').style.background=PAL.dotMx;gMarkers.selectAll('circle.mk').attr('fill',function(d){return d.id==='mx'?PAL.dotMx:PAL.dot;}).attr('stroke',PAL.halo);gMarkers.selectAll('text').attr('fill',PAL.label).attr('stroke',PAL.halo);render();paintSel();}
+  window.__rerenderGlobe=repaint;
+
+  PAL=palette();$('lg1').style.background=PAL.dot;$('lg2').style.background=PAL.dotMx;
+  d3.json('https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json').then(function(world){
+    var feats=topojson.feature(world,world.objects.countries).features;
+    gCountries.selectAll('path').data(feats).join('path').attr('stroke-width',.4).style('cursor',function(d){return gmap[d.properties.name]?'pointer':'default';}).on('click',function(e,d){var j=gmap[d.properties.name];if(j){stop();pick(j.id);}});
+    var mk=gMarkers.selectAll('g.mkg').data(ALL).join('g').attr('class','mkg gmk').on('click',function(e,d){stop();pick(d.id);}).on('mouseenter',function(e,d){d3.select(this).select('text').style('opacity',1);}).on('mouseleave',function(e,d){if(d.id!==selected)d3.select(this).select('text').style('opacity',0);});
+    mk.append('circle').attr('class','mk').attr('r',function(d){return d.id==='mx'?7:5.5;}).attr('fill',function(d){return d.id==='mx'?PAL.dotMx:PAL.dot;}).attr('stroke',PAL.halo).attr('stroke-width',1.5);
+    mk.append('text').attr('class','glabel').attr('x',function(d){return d.ll[0]>40?-10:10;}).attr('y',4).attr('text-anchor',function(d){return d.ll[0]>40?'end':'start';}).attr('fill',PAL.label).attr('stroke',PAL.halo).attr('stroke-width',3).style('opacity',function(d){return d.id===selected?1:0;}).text(function(d){return d.name;});
+    render();paintSel();
+    var sx,sy,sr;
+    var drag=d3.drag().on('start',function(e){stop();sx=e.x;sy=e.y;sr=projection.rotate();}).on('drag',function(e){var k=.45,ph=sr[1]-(e.y-sy)*k;ph=Math.max(-90,Math.min(90,ph));projection.rotate([sr[0]+(e.x-sx)*k,ph]);render();});
+    svg.style('cursor','grab').call(drag);
+    timer=d3.timer(function(){if(stopped)return;var r=projection.rotate();projection.rotate([r[0]+0.16,r[1]]);render();});
+  }).catch(function(){svg.append('text').attr('x',W/2).attr('y',W/2).attr('text-anchor','middle').attr('fill',PAL.label).style('font','400 13px var(--sans)').text('Globe unavailable — use the names below.');});
+})();
+</script>
+</body>
+</html>
