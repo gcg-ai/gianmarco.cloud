@@ -29,6 +29,18 @@
   </url>
   <url>
     <loc>https://www.gianmarco.cloud/ai-justice/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.gianmarco.cloud/ai-justice/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.gianmarco.cloud/es/ia-justicia/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.gianmarco.cloud/ai-justice/"/>
+    <lastmod>2026-06-19</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.gianmarco.cloud/es/ia-justicia/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.gianmarco.cloud/ai-justice/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.gianmarco.cloud/es/ia-justicia/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.gianmarco.cloud/ai-justice/"/>
     <lastmod>2026-06-19</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
