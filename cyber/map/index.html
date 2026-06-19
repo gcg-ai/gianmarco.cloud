@@ -85,25 +85,20 @@ h2.vs{font-family:var(--serif);font-weight:600;font-size:1.55rem;margin:0 0 6px}
 
   <div class="sect">
     <h2 class="vs">Recommendations</h2>
-    <p class="note">Real cybercrime capacity is an inter-branch achievement, not something a prosecutor’s office can self-generate. One actor can begin today. The consequential reforms belong to three others — and one precondition gates them all. Open each to see what it owns.</p>
+    <p class="note">Real cybercrime capacity is an inter-branch effort. Some measures fall within an institution’s existing authority; the larger reforms need new legislation, treaties and judicial training — and one precondition underpins them all.</p>
     <style>
-      .recmap{display:grid;grid-template-columns:repeat(auto-fit,minmax(248px,1fr));gap:10px;margin:14px 0 0;align-items:start}
-      .ract{border:1px solid var(--border);border-radius:12px;overflow:hidden;transition:border-color .3s}
-      .ract.now{border:1.5px solid var(--text)}
-      .rhead{width:100%;display:flex;align-items:center;gap:11px;padding:13px 15px;background:none;border:0;cursor:pointer;text-align:left;color:var(--text)}
-      .rhead:hover{background:var(--glow)}
-      .rnum{font:500 11px var(--mono);color:var(--faint);flex:none}
-      .rname{flex:1;min-width:0}
-      .rname b{display:block;font:500 14.5px var(--sans)}
-      .rname em{font-style:normal;font:400 12px var(--sans);color:var(--faint)}
-      .rchip{font:500 10px var(--mono);padding:3px 8px;border-radius:6px;white-space:nowrap;border:1px solid var(--border);color:var(--muted)}
-      .ract.now .rchip{border-color:var(--text);color:var(--text)}
-      .rchev{flex:none;color:var(--faint);transition:transform .25s}
-      .ract.open .rchev{transform:rotate(180deg)}
-      .ritems{margin:0;padding:0 15px 13px 40px;list-style:none}
-      .ritems li{font:400 12.5px/1.5 var(--sans);color:var(--muted);padding:6px 0;border-top:1px solid var(--border)}
+      .led{margin:16px 0 0}
+      .ledrow{display:flex;gap:14px;padding:13px 0;border-top:1px solid var(--border)}
+      .ledn{font:500 12px var(--mono);color:var(--faint);flex:none;width:16px;padding-top:6px}
+      .ledbody{flex:1;min-width:0}
+      .ledhd{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap}
+      .ledname{font:600 1.18rem var(--serif);color:var(--text)}
+      .ledcap{font:400 12px var(--sans);color:var(--faint)}
+      .ledtag{margin-left:auto;font:500 10px var(--mono);padding:3px 9px;border-radius:6px;white-space:nowrap;border:1px solid var(--border);color:var(--muted)}
+      .ledtag.now{background:var(--text);color:var(--bg);border-color:var(--text)}
+      .leditems{font:400 13px/1.7 var(--sans);color:var(--muted);margin-top:5px}
     </style>
-    <div id="recMap" class="recmap"></div>
+    <div id="recLedger" class="led"></div>
     <div id="recOversight" style="margin-top:12px"></div>
   </div>
 
@@ -214,21 +209,15 @@ function toggleTheme(){var r=document.documentElement;r.dataset.theme=r.dataset.
   $('tradeoffs').innerHTML=TRADE.map(function(t){return '<div class="card" style="padding:.85rem 1.1rem"><div style="font:500 14px var(--sans);margin-bottom:5px">'+t.t+'</div><div style="font:400 13px/1.6 var(--sans);color:var(--muted)">'+t.d+'</div></div>';}).join('');
 
   var REC=[
-    {id:'fgr',name:'Attorney General (FGR)',cap:'on its own authority',now:true,note:'Within its Article 102-A autonomy — no new law or budget. Modest but meaningful: it prepares the institutional ground, it does not create capacity by itself.',items:['Adopt standardized digital-evidence protocols (chain of custody, ISO/NIST-aligned)','Designate a cybercrime technical coordinator','Report transparently on the cybercrime caseload','Build a prosecutor training curriculum']},
-    {id:'cong',name:'Congress',cap:'law &amp; budget',now:false,note:'The legislative foundation and the money — none of it within the FGR’s reach.',items:['Amend the 1999 Federal Criminal Code to reach cyber-enabled conduct and modern attack vectors','Enact a General Cybersecurity Law defining institutional competencies and reporting duties','Amend the Código Nacional de Procedimientos Penales: digital-evidence standards, expedited preservation orders, admissibility rules','Appropriate a dedicated budget — forensic infrastructure, specialist salaries, continuous training']},
-    {id:'exec',name:'The Executive',cap:'treaties &amp; coordination',now:false,note:'Treaties and coordination — instruments only the President and Senate can deliver.',items:['Decree inter-agency coordination, with a clear line between criminal investigation and intelligence','Accede to the Budapest Convention, positioning for the parallel Hanoi Convention','Sign MOUs between the FGR and the ATDT, CERT-MX and the Centro Nacional de Inteligencia']},
-    {id:'jud',name:'The Judiciary',cap:'able to judge the evidence',now:false,note:'Prosecutorial capacity without judges who can weigh digital evidence yields cases that fail at trial.',items:['Train judges to assess digital evidence under updated admissibility and proportionality standards']}
+    {id:'fgr',name:'Attorney General (FGR)',cap:'on its own authority',now:true,items:['Adopt standardized digital-evidence protocols (chain of custody, ISO/NIST-aligned)','Designate a cybercrime technical coordinator','Report transparently on the cybercrime caseload','Build a prosecutor training curriculum']},
+    {id:'cong',name:'Congress',cap:'law &amp; budget',now:false,items:['Amend the 1999 Federal Criminal Code to reach cyber-enabled conduct and modern attack vectors','Enact a General Cybersecurity Law defining institutional competencies and reporting duties','Amend the Código Nacional de Procedimientos Penales: digital-evidence standards, expedited preservation orders, admissibility rules','Appropriate a dedicated budget — forensic infrastructure, specialist salaries, continuous training']},
+    {id:'exec',name:'The Executive',cap:'treaties &amp; coordination',now:false,items:['Decree inter-agency coordination, with a clear line between criminal investigation and intelligence','Accede to the Budapest Convention, positioning for the parallel Hanoi Convention','Sign MOUs between the FGR and the ATDT, CERT-MX and the Centro Nacional de Inteligencia']},
+    {id:'jud',name:'The Judiciary',cap:'able to judge the evidence',now:false,items:['Train judges to assess digital evidence under updated admissibility and proportionality standards']}
   ];
-  var rchev='<svg class="rchev" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>';
-  $('recMap').innerHTML=REC.map(function(r,i){
-    var chip='<span class="rchip">'+(r.now?'Can begin now':'Requires reform')+'</span>';
-    var items=r.items.map(function(x){return '<li>'+x+'</li>';}).join('');
-    return '<div class="ract'+(r.now?' now':'')+(i===0?' open':'')+'" data-ract="'+i+'"><button class="rhead" type="button"><span class="rnum">'+(i+1)+'</span><span class="rname"><b>'+r.name+'</b><em>'+r.cap+'</em></span>'+chip+rchev+'</button><ul class="ritems"'+(i===0?'':' style="display:none"')+'>'+items+'</ul></div>';
+  $('recLedger').innerHTML=REC.map(function(r,i){
+    var tag=r.now?'<span class="ledtag now">No reform required</span>':'<span class="ledtag">Requires reform</span>';
+    return '<div class="ledrow"><span class="ledn">'+(i+1)+'</span><div class="ledbody"><div class="ledhd"><span class="ledname">'+r.name+'</span><span class="ledcap">'+r.cap+'</span>'+tag+'</div><div class="leditems">'+r.items.join(' &middot; ')+'</div></div></div>';
   }).join('');
-  document.querySelectorAll('[data-ract]').forEach(function(card){
-    var btn=card.querySelector('.rhead'),its=card.querySelector('.ritems');
-    btn.addEventListener('click',function(){var open=card.classList.toggle('open');its.style.display=open?'block':'none';});
-  });
   $('recOversight').innerHTML='<div class="card" style="border-color:var(--text)"><div style="font:500 11px var(--mono);color:var(--muted);margin-bottom:6px">The precondition — under all four</div><p style="font:400 13px/1.65 var(--sans);color:var(--text);margin:0">Pair any expansion of investigative power with independent oversight that has real enforcement power: restore an autonomous data-protection and transparency guarantor to fill the void left by INAI. After Pegasus, capacity should follow oversight, not precede it.</p></div>';
 
   $('profile').innerHTML=profileHtml(MX);

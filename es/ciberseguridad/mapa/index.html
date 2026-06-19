@@ -85,25 +85,20 @@ h2.vs{font-family:var(--serif);font-weight:600;font-size:1.55rem;margin:0 0 6px}
 
   <div class="sect">
     <h2 class="vs">Recomendaciones</h2>
-    <p class="note">La verdadera capacidad frente a la cibercriminalidad es un logro interinstitucional, no algo que una fiscalía pueda generar por sí sola. Un actor puede empezar hoy. Las reformas de mayor calado corresponden a otros tres —y una condición previa las condiciona a todas—. Abra cada una para ver qué le corresponde.</p>
+    <p class="note">La capacidad frente a la cibercriminalidad es un esfuerzo interinstitucional. Algunas medidas caben dentro de las facultades actuales de cada institución; las reformas de mayor calado requieren nueva legislación, tratados y formación judicial, y una condición previa las sostiene a todas.</p>
     <style>
-      .recmap{display:grid;grid-template-columns:repeat(auto-fit,minmax(248px,1fr));gap:10px;margin:14px 0 0;align-items:start}
-      .ract{border:1px solid var(--border);border-radius:12px;overflow:hidden;transition:border-color .3s}
-      .ract.now{border:1.5px solid var(--text)}
-      .rhead{width:100%;display:flex;align-items:center;gap:11px;padding:13px 15px;background:none;border:0;cursor:pointer;text-align:left;color:var(--text)}
-      .rhead:hover{background:var(--glow)}
-      .rnum{font:500 11px var(--mono);color:var(--faint);flex:none}
-      .rname{flex:1;min-width:0}
-      .rname b{display:block;font:500 14.5px var(--sans)}
-      .rname em{font-style:normal;font:400 12px var(--sans);color:var(--faint)}
-      .rchip{font:500 10px var(--mono);padding:3px 8px;border-radius:6px;white-space:nowrap;border:1px solid var(--border);color:var(--muted)}
-      .ract.now .rchip{border-color:var(--text);color:var(--text)}
-      .rchev{flex:none;color:var(--faint);transition:transform .25s}
-      .ract.open .rchev{transform:rotate(180deg)}
-      .ritems{margin:0;padding:0 15px 13px 40px;list-style:none}
-      .ritems li{font:400 12.5px/1.5 var(--sans);color:var(--muted);padding:6px 0;border-top:1px solid var(--border)}
+      .led{margin:16px 0 0}
+      .ledrow{display:flex;gap:14px;padding:13px 0;border-top:1px solid var(--border)}
+      .ledn{font:500 12px var(--mono);color:var(--faint);flex:none;width:16px;padding-top:6px}
+      .ledbody{flex:1;min-width:0}
+      .ledhd{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap}
+      .ledname{font:600 1.18rem var(--serif);color:var(--text)}
+      .ledcap{font:400 12px var(--sans);color:var(--faint)}
+      .ledtag{margin-left:auto;font:500 10px var(--mono);padding:3px 9px;border-radius:6px;white-space:nowrap;border:1px solid var(--border);color:var(--muted)}
+      .ledtag.now{background:var(--text);color:var(--bg);border-color:var(--text)}
+      .leditems{font:400 13px/1.7 var(--sans);color:var(--muted);margin-top:5px}
     </style>
-    <div id="recMap" class="recmap"></div>
+    <div id="recLedger" class="led"></div>
     <div id="recOversight" style="margin-top:12px"></div>
   </div>
 
@@ -214,21 +209,15 @@ function toggleTheme(){var r=document.documentElement;r.dataset.theme=r.dataset.
   $('tradeoffs').innerHTML=TRADE.map(function(t){return '<div class="card" style="padding:.85rem 1.1rem"><div style="font:500 14px var(--sans);margin-bottom:5px">'+t.t+'</div><div style="font:400 13px/1.6 var(--sans);color:var(--muted)">'+t.d+'</div></div>';}).join('');
 
   var REC=[
-    {id:'fgr',name:'Fiscalía General de la República (FGR)',cap:'por su propia autoridad',now:true,note:'Dentro de su autonomía conforme al Artículo 102-A, sin necesidad de nueva ley ni presupuesto. Modesto pero significativo: prepara el terreno institucional, no genera capacidad por sí solo.',items:['Adoptar protocolos estandarizados de prueba digital (cadena de custodia, alineados con ISO/NIST)','Designar a un coordinador técnico en materia de delitos informáticos','Informar con transparencia sobre la carga de casos de delitos informáticos','Desarrollar un plan de formación para fiscales']},
-    {id:'cong',name:'el Congreso',cap:'ley y presupuesto',now:false,note:'El fundamento legislativo y los recursos: nada de ello está al alcance de la FGR.',items:['Reformar el Código Penal Federal de 1999 para alcanzar las conductas facilitadas por medios informáticos y los vectores de ataque modernos','Expedir una Ley General de Ciberseguridad que defina las competencias institucionales y los deberes de reporte','Reformar el Código Nacional de Procedimientos Penales: estándares de prueba digital, órdenes de preservación expeditas, reglas de admisibilidad','Asignar un presupuesto específico: infraestructura forense, salarios de especialistas, formación continua']},
-    {id:'exec',name:'el Poder Ejecutivo',cap:'tratados y coordinación',now:false,note:'Tratados y coordinación: instrumentos que solo el Presidente y el Senado pueden brindar.',items:['Decretar la coordinación interinstitucional, con una línea clara entre la investigación criminal y la inteligencia','Adherirse al Convenio de Budapest, posicionándose de cara a la Convención de Hanoi paralela','Suscribir convenios (MOU) entre la FGR y la ATDT, el CERT-MX y el Centro Nacional de Inteligencia']},
-    {id:'jud',name:'el Poder Judicial',cap:'capaz de valorar la prueba',now:false,note:'La capacidad de procuración de justicia sin jueces que puedan valorar la prueba digital produce casos que fracasan en el juicio.',items:['Capacitar a los jueces para valorar la prueba digital conforme a estándares actualizados de admisibilidad y proporcionalidad']}
+    {id:'fgr',name:'Fiscalía General de la República (FGR)',cap:'por su propia autoridad',now:true,items:['Adoptar protocolos estandarizados de prueba digital (cadena de custodia, alineados con ISO/NIST)','Designar a un coordinador técnico en materia de delitos informáticos','Informar con transparencia sobre la carga de casos de delitos informáticos','Desarrollar un plan de formación para fiscales']},
+    {id:'cong',name:'el Congreso',cap:'ley y presupuesto',now:false,items:['Reformar el Código Penal Federal de 1999 para alcanzar las conductas facilitadas por medios informáticos y los vectores de ataque modernos','Expedir una Ley General de Ciberseguridad que defina las competencias institucionales y los deberes de reporte','Reformar el Código Nacional de Procedimientos Penales: estándares de prueba digital, órdenes de preservación expeditas, reglas de admisibilidad','Asignar un presupuesto específico: infraestructura forense, salarios de especialistas, formación continua']},
+    {id:'exec',name:'el Poder Ejecutivo',cap:'tratados y coordinación',now:false,items:['Decretar la coordinación interinstitucional, con una línea clara entre la investigación criminal y la inteligencia','Adherirse al Convenio de Budapest, posicionándose de cara a la Convención de Hanoi paralela','Suscribir convenios (MOU) entre la FGR y la ATDT, el CERT-MX y el Centro Nacional de Inteligencia']},
+    {id:'jud',name:'el Poder Judicial',cap:'capaz de valorar la prueba',now:false,items:['Capacitar a los jueces para valorar la prueba digital conforme a estándares actualizados de admisibilidad y proporcionalidad']}
   ];
-  var rchev='<svg class="rchev" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>';
-  $('recMap').innerHTML=REC.map(function(r,i){
-    var chip='<span class="rchip">'+(r.now?'Puede comenzar ahora':'Requiere reforma')+'</span>';
-    var items=r.items.map(function(x){return '<li>'+x+'</li>';}).join('');
-    return '<div class="ract'+(r.now?' now':'')+(i===0?' open':'')+'" data-ract="'+i+'"><button class="rhead" type="button"><span class="rnum">'+(i+1)+'</span><span class="rname"><b>'+r.name+'</b><em>'+r.cap+'</em></span>'+chip+rchev+'</button><ul class="ritems"'+(i===0?'':' style="display:none"')+'>'+items+'</ul></div>';
+  $('recLedger').innerHTML=REC.map(function(r,i){
+    var tag=r.now?'<span class="ledtag now">No requiere reforma</span>':'<span class="ledtag">Requiere reforma</span>';
+    return '<div class="ledrow"><span class="ledn">'+(i+1)+'</span><div class="ledbody"><div class="ledhd"><span class="ledname">'+r.name+'</span><span class="ledcap">'+r.cap+'</span>'+tag+'</div><div class="leditems">'+r.items.join(' &middot; ')+'</div></div></div>';
   }).join('');
-  document.querySelectorAll('[data-ract]').forEach(function(card){
-    var btn=card.querySelector('.rhead'),its=card.querySelector('.ritems');
-    btn.addEventListener('click',function(){var open=card.classList.toggle('open');its.style.display=open?'block':'none';});
-  });
   $('recOversight').innerHTML='<div class="card" style="border-color:var(--text)"><div style="font:500 11px var(--mono);color:var(--muted);margin-bottom:6px">La condición previa: aplicable a las cuatro</div><p style="font:400 13px/1.65 var(--sans);color:var(--text);margin:0">Acompañe toda ampliación de las facultades de investigación con un control independiente dotado de verdadera capacidad de hacerlo cumplir: restablezca un organismo garante de protección de datos y transparencia autónomo que llene el vacío dejado por el INAI. Después de Pegasus, la capacidad debe seguir al control, no precederlo.</p></div>';
 
   $('profile').innerHTML=profileHtml(MX);
