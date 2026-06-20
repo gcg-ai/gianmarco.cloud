@@ -51,7 +51,7 @@ h2.vs{font-family:var(--serif);font-weight:600;font-size:1.55rem;margin:0 0 6px}
 </header>
 
 <main class="wrap">
-  <h2 class="sr-only">An interactive globe comparing how six jurisdictions build cybersecurity and cybercrime capacity — the United States, Germany for the EU, Brazil, Colombia, Singapore and Estonia — with Mexico as a reference point. Drag to rotate; select a country, by marker or by name button, to open its profile across six dimensions.</h2>
+  <p class="sr-only">An interactive globe comparing how six jurisdictions build cybersecurity and cybercrime capacity — the United States, Germany for the EU, Brazil, Colombia, Singapore and Estonia — with Mexico as a reference point. Drag to rotate; select a country, by marker or by name button, to open its profile across six dimensions.</p>
   <p class="vk">Comparative analysis</p>
   <h1 class="vh">Cyber Lessons for Mexico</h1>
   <p class="lede">How six jurisdictions build cybersecurity and cybercrime capacity — the United States, the EU (with Germany), Brazil, Colombia, Singapore and Estonia — mapped across six dimensions, with Mexico as a reference point. Drag to spin the globe; click a marker, or a name below it, to open one.</p>
@@ -111,8 +111,8 @@ h2.vs{font-family:var(--serif);font-weight:600;font-size:1.55rem;margin:0 0 6px}
   <p style="font:400 12px/1.6 var(--sans);color:var(--faint);text-align:center;margin:26px 0 0">From my comparative research on national cybersecurity and cybercrime policy frameworks. Sources are linked within each jurisdiction. &copy; <span id="yr">2026</span> Gianmarco Coronado Graci.</p>
 </main>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.5/d3.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/topojson/3.0.2/topojson.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.5/d3.min.js" integrity="sha384-su5kReKyYlIFrI62mbQRKXHzFobMa7BHp1cK6julLPbnYcCW9NIZKJiTODjLPeDh" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/topojson/3.0.2/topojson.min.js" integrity="sha384-9dCJK6nh7skY14HrcvlLYlFga9/MehJjL9ONWRflmiXNRuf8p2jiF4Y5PR881PTq" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script>
 function toggleTheme(){var r=document.documentElement;r.dataset.theme=r.dataset.theme==='dark'?'light':'dark';if(window.__rerenderGlobe)window.__rerenderGlobe();}
 (function(){var y=document.getElementById('yr');if(y)y.textContent=new Date().getFullYear();})();
