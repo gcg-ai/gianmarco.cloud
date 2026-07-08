@@ -431,15 +431,15 @@
   <section class="block reveal">
     <p class="sec-label" data-en="My work" data-es="Mi trabajo">My work</p>
     <div class="pubs">
-      <a class="pub" href="/articulo6/">
+      <a class="pub" href="/articulo6/" data-href-en="/articulo6/" data-href-es="/es/articulo6/">
         <span class="pub-body"><span class="pub-title" data-en="Art&iacute;culo 6" data-es="Art&iacute;culo 6">Art&iacute;culo 6</span><span class="pub-meta" data-en="AI for freedom-of-expression law &middot; Mexico" data-es="IA sobre libertad de expresi&oacute;n &middot; M&eacute;xico">AI for freedom-of-expression law &middot; Mexico</span></span>
         <span class="pub-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
       </a>
-      <a class="pub" href="/cyber/">
+      <a class="pub" href="/cyber/" data-href-en="/cyber/" data-href-es="/es/ciberseguridad/">
         <span class="pub-body"><span class="pub-title" data-en="Cyber Lessons for Mexico" data-es="Lecciones cibern&eacute;ticas para M&eacute;xico">Cyber Lessons for Mexico</span><span class="pub-meta" data-en="Six jurisdictions, mapped &middot; interactive" data-es="Seis jurisdicciones &middot; interactivo">Six jurisdictions, mapped &middot; interactive</span></span>
         <span class="pub-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
       </a>
-      <a class="pub" href="/ai-justice/">
+      <a class="pub" href="/ai-justice/" data-href-en="/ai-justice/" data-href-es="/es/ia-justicia/">
         <span class="pub-body"><span class="pub-title" data-en="Every law firm is now an AI firm" data-es="Todo despacho es ya un despacho de IA">Every law firm is now an AI firm</span><span class="pub-meta" data-en="AI &amp; the justice gap &middot; essay" data-es="IA y la brecha de justicia &middot; ensayo">AI &amp; the justice gap &middot; essay</span></span>
         <span class="pub-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
       </a>
@@ -632,6 +632,10 @@
       // cv-role and bio strings carry inline markup (<em>, <span>, <br>); render as HTML. Everything else is plain text.
       if(el.classList.contains('cv-role') || el.classList.contains('bio')) el.innerHTML = val;
       else el.textContent = val;
+    });
+    // internal links with a Spanish twin follow the page language
+    document.querySelectorAll('[data-href-en]').forEach(function(el){
+      el.setAttribute('href', el.getAttribute('data-href-' + lang));
     });
     document.querySelector('.langbtn').textContent = lang === 'en' ? 'ES' : 'EN';
     document.documentElement.lang = lang;
