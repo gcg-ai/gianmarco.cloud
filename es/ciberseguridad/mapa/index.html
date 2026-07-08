@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data:; connect-src https://cdn.jsdelivr.net; base-uri 'self'; form-action 'self';">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.5/d3.min.js https://cdnjs.cloudflare.com/ajax/libs/topojson/3.0.2/topojson.min.js; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data:; connect-src https://cdn.jsdelivr.net; base-uri 'self'; form-action 'self';">
 <meta name="referrer" content="strict-origin-when-cross-origin">
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script>try{if(window.top!==window.self){window.top.location.replace(window.self.location.href)}}catch(e){}</script>
 <title>Lecciones cibernéticas para México — Gianmarco Coronado Graci</title>
 <meta name="description" content="Una comparación interactiva de los marcos nacionales de política de ciberseguridad y cibercriminalidad en seis jurisdicciones, mapeados sobre seis dimensiones.">
 <link rel="stylesheet" href="/fonts.css">
@@ -252,7 +253,7 @@ function toggleTheme(){var r=document.documentElement;r.dataset.theme=r.dataset.
   window.__rerenderGlobe=repaint;
 
   PAL=palette();$('lg1').style.background=PAL.dot;$('lg2').style.background=PAL.dotMx;
-  d3.json('https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json').then(function(world){
+  d3.json('https://cdn.jsdelivr.net/npm/world-atlas@2.0.2/countries-110m.json').then(function(world){
     var feats=topojson.feature(world,world.objects.countries).features;
     gCountries.selectAll('path').data(feats).join('path').attr('stroke-width',.4).style('cursor',function(d){return gmap[d.properties.name]?'pointer':'default';}).on('click',function(e,d){var j=gmap[d.properties.name];if(j){stop();pick(j.id);}});
     var mk=gMarkers.selectAll('g.mkg').data(ALL).join('g').attr('class','mkg gmk').on('click',function(e,d){stop();pick(d.id);}).on('mouseenter',function(e,d){d3.select(this).select('text').style('opacity',1);}).on('mouseleave',function(e,d){if(d.id!==selected)d3.select(this).select('text').style('opacity',0);});
